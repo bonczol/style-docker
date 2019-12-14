@@ -17,15 +17,22 @@ RUN apt-get update && apt-get install -y software-properties-common && \
 	apt-get update && \
 	apt-get install -y git && \
 	curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | bash && \
+	apt-get install -y git-lfs && \
 	apt-get install -y python3 && \
 	apt-get install -y python3-pip && \
+	apt-get install -y ffmpeg && \
+	apt-get install -y libavcodec-dev libavformat-dev libavdevice-dev && \
+	apt-get install -y libgtk2.0-dev pkg-config libv4l-dev && \
+	apt-get install -y python3-opencv && \
 	git clone https://github.com/kamieen03/distiller.git && \
 	cd distiller && \
 	pip3 install -e . && \
 	pip3 install cmake && \
-	apt-get install -y make
+	apt-get install -y make && \
+	apt-get install -y vim ranger
 
-RUN curl -s https://raw.githubusercontent.com/kamieen03/style-transfer-net/master/utils/install_opencv.sh | bash 
+RUN curl -s https://raw.githubusercontent.com/kamieen03/style-transfer-net/master/utils/install_opencv.sh | bash && \
+    git clone https://github.com/kamieen03/style-transfer-net.git
 
 
 
