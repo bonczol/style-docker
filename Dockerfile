@@ -1,7 +1,7 @@
 FROM nvidia/cuda:10.1-runtime-ubuntu18.04
 WORKDIR /style
 LABEL maintainer "NVIDIA CORPORATION <cudatools@nvidia.com>"
-ENV CUDNN_VERSION 7.6.5.32
+ENV CUDNN_VERSION 7.6.5.32 
 LABEL com.nvidia.cudnn.version="${CUDNN_VERSION}"
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
@@ -23,7 +23,6 @@ RUN apt-get update && apt-get install -y software-properties-common && \
 	apt-get install -y ffmpeg && \
 	apt-get install -y libavcodec-dev libavformat-dev libavdevice-dev && \
 	apt-get install -y libgtk2.0-dev pkg-config libv4l-dev && \
-	apt-get install -y python3-opencv && \
 	git clone https://github.com/kamieen03/distiller.git && \
 	cd distiller && \
 	pip3 install -e . && \
