@@ -33,5 +33,6 @@ RUN apt-get update && apt-get install -y software-properties-common && \
 RUN curl -s https://raw.githubusercontent.com/kamieen03/style-transfer-net/master/utils/install_opencv.sh | bash && \
     git clone https://github.com/kamieen03/style-transfer-net.git
 
-
-
+RUN git clone https://github.com/bbbrtk/aiortc.git && \
+	apt-get install -y libavfilter-dev libopus-dev libvpx-dev libsrtp2-dev && \
+	pip3 install flask aiohttp aiortc
