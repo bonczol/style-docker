@@ -72,10 +72,8 @@ RUN pip3 install setuptools wheel && \
 
 #REPOS
 RUN git clone https://github.com/bbbrtk/aiortc.git && \
-    wget https://www.dropbox.com/s/7g7d45m7cifbno2/LinearStyleTransfer.tar.gz && \
-    tar xzvf LinearStyleTransfer.tar.gz && \
-    rm LinearStyleTransfer.tar.gz && \
-    mv LinearStyleTransfer_nongit LinearStyleTransfer && \
+    git clone https://github.com/kamieen03/style-transfer-server && \
+    mv style-transfer-server LinearStyleTransfer && \
     git clone https://github.com/NVIDIA/TensorRT && \
     cd TensorRT && \
     git checkout daacf1537c9310ab9d4a7e8a7b33cb3739289a32 && \

@@ -11,6 +11,7 @@ cmake .. -DTRT_LIB_DIR=$TRT_RELEASE/lib \
 make -j$(nproc) && \
 make install && \
 cd /style/LinearStyleTransfer && \
-./utils/compile_full_model.py && \
+mkdir -p models/onnx && \
+mkdir -p models/trt && \
 ./utils/make_engine.sh
 
