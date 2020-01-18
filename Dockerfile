@@ -67,7 +67,7 @@ RUN rm /etc/apt/sources.list.d/nv-tensorrt-cuda10.1-trt6.0.1.5-ga-20190913.list 
 #PIP
 RUN pip3 install setuptools wheel && \
     pip3 install flask aiohttp aiortc Pillow pycuda torch && \
-    pip3 install cmake protobuf onnx==1.5.0 && \
+    pip3 install cmake protobuf onnx==1.5.0 onnx-simplifier && \
     rm -rf /root/.cache/pip/http
 
 #REPOS
