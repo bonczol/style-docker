@@ -12,3 +12,5 @@ $ ./configure_models.sh
 $ exit
 $ docker commit temp_style kamieen03/style-transfer
 $ docker run -it --gpus all kamieen03/style-transfer:latest
+$ cd LinearStyleTransfer
+$ ./speed_test_trt.py
