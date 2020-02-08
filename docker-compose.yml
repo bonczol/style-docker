@@ -1,10 +1,5 @@
 version: '3'
 services:
-  style-transfer:
-    image: kamieen03/style-transfer:latest
-    ports:
-    - "8080:8080"
-    - "5000:5000"  
   nginx:
     image: nginx:stable-alpine
     ports:
